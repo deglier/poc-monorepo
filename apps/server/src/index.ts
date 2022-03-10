@@ -1,10 +1,35 @@
 import express from 'express'
+import { Prisma, PrismaClient } from '@prisma/client'
 
+const prisma = new PrismaClient()
 const app = express()
 const port = 4000
 
-app.get('/', (_req, res) => {
+app.use(express.json())
+
+app.get('/', (req, res) => {
   res.send('Hello World haha!')
+})
+
+app.post('/user', async (req, res) => {
+  const { email, name } = req.body as Prisma.UserCreateInput
+  try {
+    const user = await prisma.user.create({
+      data: {
+        email,
+        name,
+      },
+    })
+    res.json(user)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    res.status(500).json({ error: error.message })
+  }
+})
+
+app.get('/users', async (req, res) => {
+  const users = await prisma.user.findMany()
+  res.json(users)
 })
 
 app.listen(port, () => {

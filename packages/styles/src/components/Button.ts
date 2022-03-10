@@ -30,6 +30,6 @@ export const Button = css({
     },
   },
   defaultVariants: {
-    variant: 'highligh02',
+    variant: 'primary',
   },
 })
