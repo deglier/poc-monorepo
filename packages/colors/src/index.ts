@@ -1,8 +1,6 @@
-import { slate, sky } from '@radix-ui/colors'
+// import { slate, sky } from '@radix-ui/colors'
 
 const baseColors = {
-  ...slate,
-  ...sky,
   'brand-primary-up': '#A5B9FF',
   'brand-primary-pure': '#6270FF',
   'brand-primary-deep': '#2C2469',

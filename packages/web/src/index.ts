@@ -3,9 +3,14 @@ import { createStitches, defaultThemeMap } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
 
 import { space } from './partials/space'
-import { sizes } from './partials/sizes'
 
 export const { styled, css, globalCss, getCssText } = createStitches({
+  media: {
+    bp1: '(min-width: 640px)',
+    bp2: '(min-width: 768px)',
+    bp3: '(min-width: 1024px)',
+  },
+
   themeMap: {
     ...defaultThemeMap,
     width: 'space',
@@ -66,13 +71,6 @@ export const { styled, css, globalCss, getCssText } = createStitches({
       overlay: 9995,
       modal: 9999,
     },
-  },
-
-  media: {
-    sm: `@media (min-width: ${sizes.sm})`,
-    md: `@media (min-width: ${sizes.md})`,
-    lg: `@media (min-width: ${sizes.lg})`,
-    xl: `@media (min-width: ${sizes.xl})`,
   },
 
   utils: {

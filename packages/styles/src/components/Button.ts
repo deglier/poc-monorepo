@@ -6,10 +6,9 @@ export const Button = css({
   px: '$8',
   py: '$4',
   fontFamily: '$primary',
-  fontWeight: 500,
+  fontWeight: 600,
   fontSize: '$16',
-  textTransform: 'uppercase',
-  letterSpacing: '$widest',
+  lineHeight: 1,
   variants: {
     variant: {
       primary: {
@@ -19,6 +18,14 @@ export const Button = css({
       highligh02: {
         backgroundColor: '$brand-highlight-02',
         color: '$brand-primary-deep',
+      },
+    },
+    width: {
+      full: {
+        width: '100%',
+      },
+      auto: {
+        width: 'auto',
       },
     },
   },
