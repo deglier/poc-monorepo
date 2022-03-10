@@ -1,12 +1,12 @@
 {
   "name": "@ui/styles",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@radix-ui/colors": "^0.1.8",
-    "@stitches/core": "^1.2.7"
+    "stitches-reset": "^1.0.0",
+    "@ui/web": "*"
   },
   "devDependencies": {
     "tsconfig": "*",

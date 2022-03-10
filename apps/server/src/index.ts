@@ -8,5 +8,6 @@ app.get('/', (_req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  // show console log whith rocket emoji
+  console.log(`🚀 Server is running on port ${port}`)
 })

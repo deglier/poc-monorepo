@@ -6,6 +6,6 @@ import { render, screen } from '@testing-library/react'
 describe('tests', () => {
   it('should', () => {
     render(<HelloWorld />)
-    expect(screen.getByText('Boop 2')).toBeInTheDocument()
+    expect(screen.getByText('Adicionar')).toBeInTheDocument()
   })
 })

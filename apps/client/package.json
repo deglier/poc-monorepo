@@ -1,5 +1,5 @@
 {
-  "name": "next-app",
+  "name": "client",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,14 +7,17 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --coverage",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "serve-coverage": "serve -s ./apps/client/coverage/lcov-report "
   },
   "dependencies": {
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "server": "*",
-    "@ui/react": "*"
+    "@ui/react": "*",
+    "@ui/web": "*",
+    "@ui/styles": "*"
   },
   "devDependencies": {
     "@types/node": "^17.0.0",
