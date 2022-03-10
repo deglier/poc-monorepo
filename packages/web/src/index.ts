@@ -71,6 +71,9 @@ export const { styled, css, globalCss, getCssText } = createStitches({
       overlay: 9995,
       modal: 9999,
     },
+    shadows: {
+      inputNormal: '0 0 0 1px $neutral-dark-deep',
+    },
   },
 
   utils: {

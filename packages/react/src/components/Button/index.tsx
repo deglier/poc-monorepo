@@ -10,6 +10,5 @@ export type ButtonProps = React.ComponentProps<typeof StyledButton> & {
 }
 
 export const Button = ({ children, ...props }: ButtonProps) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <StyledButton {...props}>{children}</StyledButton>
 )

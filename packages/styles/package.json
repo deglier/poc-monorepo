@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "stitches-reset": "^1.0.0",
-    "@ui/web": "*"
+    "@ui/web": "*",
+    "@ui/colors": "*"
   },
   "devDependencies": {
     "tsconfig": "*",
