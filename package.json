@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:client": "turbo run build --scope='client' --include-dependencies",
     "dev:client": "turbo run dev --scope='client' --include-dependencies",
     "dev": "turbo run dev --parallel",
     "test": "turbo run test",
