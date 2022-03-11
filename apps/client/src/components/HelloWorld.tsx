@@ -5,7 +5,7 @@ import { Button, TextField, Label, FormControl } from '@ui/react'
 const HelloWorld = () => (
   <>
     <h1>Hello There client!</h1>
-    <FormControl direction="vertical" align="start" space={16}>
+    <FormControl direction="vertical" align="start" space={8}>
       <Label htmlFor="name">Seu nome</Label>
       <TextField placeholder="Jhon Doe" id="name" />
     </FormControl>
