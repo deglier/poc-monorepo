@@ -1,12 +1,16 @@
 import React from 'react'
 
-import { Button, TextField } from '@ui/react'
+import { Button, TextField, Label, FormControl } from '@ui/react'
 
 const HelloWorld = () => (
   <>
-    <h1>Hello There!</h1>
-    <TextField type="text" placeholder="Something..." />
+    <h1>Hello There client!</h1>
+    <FormControl direction="vertical" align="start" space={16}>
+      <Label htmlFor="name">Seu nome</Label>
+      <TextField placeholder="Jhon Doe" id="name" />
+    </FormControl>
     <Button
+      variant="highligh02"
       width={{
         '@initial': 'full',
         '@bp1': 'auto',

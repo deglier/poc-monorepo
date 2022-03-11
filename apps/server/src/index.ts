@@ -1,5 +1,5 @@
 import express from 'express'
-import { Prisma, PrismaClient } from '@prisma/client'
+import { PrismaClient, User } from '@prisma/client'
 
 const prisma = new PrismaClient()
 const app = express()
@@ -12,15 +12,15 @@ app.get('/', (req, res) => {
 })
 
 app.post('/user', async (req, res) => {
-  const { email, name } = req.body as Prisma.UserCreateInput
+  const { email, name } = req.body as User
   try {
-    const user = await prisma.user.create({
+    await prisma.user.create({
       data: {
         email,
         name,
       },
     })
-    res.json(user)
+    res.status(201).send({})
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     res.status(500).json({ error: error.message })

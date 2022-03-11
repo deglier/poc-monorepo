@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Graph</title>
+      </head>
+      <body>
+        <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2-pre.1/viz.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2-pre.1/full.render.js"></script>
+        <script>const s = `digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] @ui/react#build" -> "[root] ___ROOT___#build"
+		"[root] ___ROOT___#build" -> "[root] ___ROOT___"
+		"[root] admin#build" -> "[root] @ui/react#build"
+		"[root] admin#build" -> "[root] ___ROOT___#build"
+		"[root] admin#build" -> "[root] config#build"
+		"[root] admin#build" -> "[root] tsconfig#build"
+		"[root] client#build" -> "[root] @ui/react#build"
+		"[root] client#build" -> "[root] ___ROOT___#build"
+		"[root] client#build" -> "[root] config#build"
+		"[root] client#build" -> "[root] tsconfig#build"
+		"[root] config#build" -> "[root] ___ROOT___#build"
+		"[root] server#build" -> "[root] ___ROOT___#build"
+		"[root] server#build" -> "[root] config#build"
+		"[root] server#build" -> "[root] tsconfig#build"
+		"[root] tsconfig#build" -> "[root] ___ROOT___#build"
+	}
+}
+`.replace(/\_\_\_ROOT\_\_\_/g, "Root").replace(/\[root\]/g, "");new Viz().renderSVGElement(s).then(el => document.body.appendChild(el)).catch(e => console.error(e));
+      </script>
+    </body>
+    </html>
